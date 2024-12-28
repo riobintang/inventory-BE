@@ -56,6 +56,7 @@ npm run start-dev
 ## Auth
 
 ### Login
+User login using this API
 Endpoint
 ```text
 POST /auth/login
@@ -88,6 +89,7 @@ Response Fail
 ```
 
 ### Get Profile
+User gets their own profile
 Endpoint
 ```text
 POST /auth/me
@@ -117,6 +119,7 @@ Response Success
 ```
 
 ### Change Password
+User can change their password with this API
 Endpoint
 ```text
 POST /auth/change-password
@@ -211,7 +214,7 @@ Response Fail
 ```
 
 ### Get All User
-Get All User with filtering by user or username and isactive
+Get All User with filtering by user or username and isactive. 
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -280,6 +283,9 @@ Response Fail
 ```
 
 ### Set Active Auditor
+This API sets the auditor's active status.
+Set to false to prevent the auditor from logging in,
+and set to true to allow the auditor to log in.
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -310,6 +316,7 @@ Response Fail
 }
 ```
 ### Reset Password Auditor
+This API for reset password auditor, admin get the new password that automatically generate by system.
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -344,6 +351,7 @@ Response Fail
 ```
 
 ### Delete Auditor
+This API for Delete Auditor
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -375,6 +383,7 @@ Response Fail
 
 ## Type
 ### Get All Types
+This API for get all Types. This will return array on data type
 Endpoint
 ```text
 GET /types/
@@ -404,9 +413,10 @@ Response Success
 ```
 
 ### Get Type By Id
+This API for get type by specific id
 Endpoint
 ```text
-GET /types/:id => /users/[string]
+GET /types/:id => /users/[number]
 ```
 Body
 
@@ -441,6 +451,7 @@ Response Fail
 ```
 
 ### Add Type
+For adding new type
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -473,6 +484,7 @@ Response Fail
 ```
 
 ### Edit Type
+This API for edit Type
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -505,6 +517,7 @@ Response Fail
 ```
 
 ### Delete Type
+This API for delete type by id
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -536,6 +549,7 @@ Response Fail
 
 ## Inventory
 ### Get All Inventories
+Get all Inventories. Return array on data inventory 
 Endpoint
 ```text
 GET /inventories/
@@ -570,6 +584,7 @@ Response Success
 ```
 
 ### Get Inventory By Id
+Get inventory by specific id
 Endpoint
 ```text
 GET /inventory/:id => /users/[number]
@@ -610,6 +625,7 @@ Response Fail
 ```
 
 ### Add Inventory 
+This API for adding new inventory
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -645,6 +661,7 @@ Response Fail
 ```
 
 ### Edit Inventory 
+This API for edit inventory by id
 Can only be accessed by Admin
 Endpoint
 ```text
@@ -679,6 +696,7 @@ Response Fail
 }
 ```
 ### Delete Inventory 
+This API for delete inventory by specific id
 Can only be accessed by Admin
 Endpoint
 ```text
