@@ -52,6 +52,14 @@ npm run start-dev
   - [Delete Inventory](#delete-inventory)
 
 
+This project has two user roles: Admin and Auditor. The Admin has full access, while the Auditor has read-only access to the inventory.
+If an Auditor attempts to access admin resources, the response will be:
+```json
+{
+    "status": "fail",
+    "message": "You are not allowed to access"
+}
+```
 
 ## Auth
 
